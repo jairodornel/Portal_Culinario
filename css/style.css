@@ -1,0 +1,340 @@
+
+    * {
+        line-height: 1.5; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        font-size: 18px;
+
+    }
+
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.logoo img {
+  width: 120px; /* Define o tamanho horizontal */
+  height: auto;  /* Mantém a proporção correta */ 
+  cursor: pointer; 
+  
+} 
+
+img {
+
+    cursor: pointer; 
+
+}
+
+header {
+  display: flex;             /* Ativa o modo flexível */
+  align-items: center;      /* Garante que o logo e o texto fiquem alinhados verticalmente no meio */
+  padding: 12px;            /* Dá um respiro nas bordas */
+  justify-content: center; 
+  gap: 100px;  
+  background-color: #FFFFFF;  
+  border: 1px solid #ccc;
+  position: fixed; /* Fixa o elemento na tela */
+  top: 0;          /* Cola no topo absoluto */
+  left: 0;         /* Garante que comece na esquerda */
+  width: 100%;     /* Faz o header ocupar toda a largura */
+  z-index: 1000;   /* Garante que ele fique por cima de outros elementos */
+  height: 90px; /* Altura fixa */
+
+        
+}
+
+
+
+input {
+  border: 1px solid #ccc;
+  border-right: none; /* Remove a borda direita para não dobrar a linha entre eles */
+  padding: 12px; 
+  outline: none; 
+  width: 450px; 
+  border-radius: 20px 0 0 20px;
+
+} 
+
+input::placeholder { 
+    
+    color: #4E5F7E;  
+
+ }
+
+button {
+  background-color: #E18942;
+  color: white;
+  border: 1px solid #E18942; 
+  padding: 12px 22px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;  
+}
+
+.seachh {
+  display: flex; /* Faz o input e o botão ficarem um ao lado do outro */
+  /* NÃO usamos gap aqui para eles ficarem colados */
+} 
+
+
+/* Navbar */ 
+
+
+ 
+#menuu {
+
+  padding-top: 90px ; /* Use o valor exato da altura do seu header */
+  list-style: none;
+  margin: 0;
+  border-bottom: 2px solid #ccc;  
+  box-shadow: 0 4px 30px -2px rgba(0, 0, 0, 0.1); 
+  
+  
+
+} 
+
+#menuu:hover {
+  border-bottom: 2px solid  #E18942;  
+
+}
+
+#menuuuu {
+  display: flex;            /* Alinha os itens em linha */
+  list-style: none;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 0;
+
+} 
+
+
+/* 2. Item pai do submenu */
+.tem-submenu {
+  position: relative;       /* Essencial: o submenu se posiciona em relação a este li */
+} 
+
+
+#menuuuu > li > a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+} 
+
+
+
+
+
+
+/* Ajuste no Submenu para aparecer centralizado abaixo do item pai */
+/* 1. Esconde o submenu por padrão */
+.submenu {
+  display: none;
+  position: absolute; /* 2. Faz ele flutuar sobre o conteúdo abaixo */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  text-decoration: none; 
+  top: 100%; /* Aparece logo abaixo do menu principal */
+  left: 50%; 
+  background-color: #fff;
+  transform: translateX(-50%);
+
+}
+
+
+.submenu li {
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 8px 15px;
+  border-radius: 4px; /* Opcional: cantos arredondados */
+  
+
+}
+
+.submenu a {
+    
+  text-decoration: none;
+  color: #4E5F7E;
+
+
+} 
+
+.submenu a:hover{
+  color: #E18942;
+}
+
+
+
+
+/* 3. Mostra o submenu quando passamos o mouse no <li> pai */
+.tem-submenu:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0); /* Mantém centralizado ao subir */
+} 
+
+
+.menuuu {
+
+  color: #4E5F7E;
+  font-weight: bold; 
+  font-size: 16px; 
+
+} 
+
+.menuuu:hover {
+  color: #E18942; 
+} 
+
+
+/* Footer */ 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa no mínimo a altura da tela inteira */
+}
+
+#rodape {
+
+  width: 100%;  
+  height: 270px; 
+  display: flex; 
+  justify-content: center; 
+  background-color: #E8E8E8;
+  
+
+}  
+
+
+
+#rodaa {
+  display: flex;
+  flex-direction: column;  /* Faz a imagem ficar sobre o texto */
+  align-items: center;     /* Centraliza a imagem e o texto horizontalmente */
+  text-align: center;
+  gap: 9px; 
+  padding-top: 31px;
+}
+
+
+#rodaaa {
+
+  color: #3e495e;
+  padding-left: 26px;
+  padding-right: 26px; 
+}
+
+.tra {
+
+    color: #4E5F7E; 
+
+}
+
+/* Cards */ 
+
+.arroz { 
+  display: grid;
+  /* Cria colunas de no mínimo 250px, preenchendo o espaço disponível */
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 38px;
+}
+
+.recipe-card {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #333;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem siga o arredondamento */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; /* Efeito de animação ao passar o mouse */
+  border: 1px solid #c1cce2 ;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px); /* O card "sobe" levemente ao passar o mouse */
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+.recipe-info {
+  padding: 15px;
+}
+
+.recipe-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: #d35400; /* Um tom de laranja/gastronomia */
+}
+
+.recipe-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}   
+
+.maisColunas {
+  display: grid;
+  /* Cria duas colunas de tamanhos iguais */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; /* Espaço entre as duas seções */
+  padding: 20px;
+} 
+
+
+/* Css Arroz Cremoso Temperado */ 
+
+.styleCremoso {
+  display: flex;
+  flex-direction: column;  /* Faz a imagem ficar sobre o texto */
+  align-items: flex-start; /* Esquerda  a imagem e o texto horizontalmente */
+  gap: 40px;   
+  padding: 0 5%; /* Adiciona 5% de espaço nas laterais */ 
+  margin-bottom: 50px;  
+  padding-top: 95px; 
+  padding-left: 30%;  
+
+  
+   
+
+} 
+
+.esquerdo { 
+  color: #4E5F7E; 
+
+} 
+
+.titulos {
+  color:#4E5F7E ; 
+  font-size: 26px; 
+}   
+
+
+
+.lara {
+  color: #E18942; 
+  padding-left: 25px;
+}
+
+.lalara{
+  color: #E18942; 
+  font-size: 34px; 
+}
+
+
+
+
+
+
+
+
+
